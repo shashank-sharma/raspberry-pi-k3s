@@ -1,0 +1,22 @@
+server:
+  nodeSelector:
+    kubernetes.io/hostname: rp0
+  securityContext:
+    runAsUser: 1000
+    runAsNonRoot: true
+    runAsGroup: 1000
+    fsGroup: 1000
+  persistentVolume:
+    enabled: true
+    existingClaim: "prometheus-ssd-pvc"
+    volumeName: "prometheus-ssd-pv"
+
+alertmanager:
+  enabled: false
+
+pushgateway:
+  enabled: false
+
+configmapReload:
+  prometheus:
+    enabled: false

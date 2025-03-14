@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/home/shashank/ssd"
+    path: "/home/shashank/ssd/prometheus/rp0"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

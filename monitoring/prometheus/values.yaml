@@ -10,6 +10,14 @@ server:
     enabled: true
     existingClaim: "prometheus-ssd-pvc"
     volumeName: "prometheus-ssd-pv"
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts:
+      - prometheus.local
+    paths:
+      - /
+    pathType: Prefix
 
 alertmanager:
   enabled: false
